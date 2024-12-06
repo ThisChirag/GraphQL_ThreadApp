@@ -1,0 +1,29 @@
+{
+  "name": "thread-app-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch & nodemon dist/index.js",
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "@types/cors": "^2.8.17",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express4@latest": "link:@apollo/server/express4@latest",
+    "graphql": "^16.9.0"
+  }
+}

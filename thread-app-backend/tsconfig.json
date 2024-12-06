@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",            // Output compiled files to the `dist` folder
+    "rootDir": "./src",            // Source TypeScript files are in the `src` folder
+    "target": "ES2020",            // Use modern JavaScript features
+    "module": "commonjs",          // CommonJS for Node.js compatibility
+    "moduleResolution": "node",    // Resolve modules as Node.js does
+    "esModuleInterop": true,       // Enable compatibility with CommonJS modules
+    "strict": true,                // Enable all strict type-checking options
+    "declaration": true,           // Generate .d.ts declaration files (optional, for typing)
+    "sourceMap": true,             // Generate source maps (for debugging)
+    "skipLibCheck": true,          // Skip type checking of declaration files
+    "removeComments": true         // Remove comments in the output (for smaller bundles)
+  },
+  "include": ["src/**/*.ts"],      // Include all TypeScript files in the `src` folder
+  "exclude": ["node_modules"]      // Exclude the `node_modules` folder
+}
