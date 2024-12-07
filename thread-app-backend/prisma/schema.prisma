@@ -16,7 +16,7 @@ datasource db {
 model User{
   id String @id @default(uuid())
   firstName String @map("first_name") //at core level we will use firstName and in DB we will use the underscore structure
-  lastName String @map("last_name")
+  lastName String? @map("last_name")
   profileImageUrl String? @map("profile_image_url")
   email String @unique
   password String
