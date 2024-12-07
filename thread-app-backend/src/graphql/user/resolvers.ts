@@ -8,6 +8,15 @@ const queries = {
             password: payload.password,
         })
         return token;
+    },
+
+    getCurrentLoggedInUser: async(_:any, parameters:any, context: any)=>{
+        if(context && context.user){
+            const id = context.user.id;
+            const user = await UserService.getUserById(id);
+            return user;
+        }
+        throw new Error("I don't know who you are")
     }
 
 };
@@ -17,6 +26,8 @@ const mutations = {
         const res = await UserService.createUser(payload);
         return res.id;
     },
+
+
 };
 
 export const resolvers = {queries, mutations};
