@@ -22,7 +22,7 @@ async function startServer() {
             const user = UserService.decodeJWTToken(token as string )
             return {user};
           }catch(error){
-            throw new Error('token invalid/expired or not provided');
+            throw new Error('token invalid/expired or not providedg');
           }
 
       },
